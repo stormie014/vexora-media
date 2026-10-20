@@ -2,7 +2,7 @@ Hola,
 
 Aquí están los 2 anuncios de muestra para Prueba 2:
 
-[ANUNCIO 1 · Feed] una consulta sin costo con el botón Llamar → botón Llamar
+[ANUNCIO 1 · Feed] una consulta sin costo con respuesta el mismo día → botón Llamar
 [ANUNCIO 2 · Stories] una Story corta para agendar la llamada → botón Llamar
 
 Verlos en grande: https://stormie014.github.io/vexora-media/s/74ffcfeb256cbcde/
