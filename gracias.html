@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>¡Listo! · Vexora</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="site-assets/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;500;700&family=Space+Mono&display=swap">
+<style>
+:root{--teal:#0D7C80;--pink:#C8365F;--bg:#F4F7F7;--surface:#fff;--ink:#14252A;--muted:#4D6267;--line:#D5E0E0;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Figtree",system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:40px max(20px,env(safe-area-inset-left,0px)) 64px max(20px,env(safe-area-inset-right,0px))}
+.label{font:.82rem "Space Mono",monospace;color:var(--teal)}
+h1{font:800 clamp(2.2rem,6vw,3.4rem)/1.02 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em;margin:12px 0 0;text-wrap:balance}
+.en{color:var(--muted);font-weight:500}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:22px}
+ol{margin:0;padding-left:22px}
+li{margin-top:10px}
+.mail{display:inline-block;font:700 1rem "Space Mono",monospace;background:var(--ink);color:#fff;padding:8px 12px;border-radius:10px;user-select:all}
+a{color:var(--teal)}
+.top{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:16px;align-items:center}
+@media (max-width:520px){.top{grid-template-columns:minmax(0,1fr) 100px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="label">// recibido · received</div>
+      <h1>¡Listo! Tus 2 anuncios ya están en camino.</h1>
+      <p class="en" style="font-size:1.15rem;margin:10px 0 0">Done! Your 2 sample ads are on their way.</p>
+    </div>
+    <div id="vexi" aria-hidden="true"></div>
+  </div>
+
+  <div class="card">
+    <strong>Qué pasa ahora · What happens next</strong>
+    <ol>
+      <li>En unas <b>72 horas</b> recibes 2 anuncios de muestra y un plan de lanzamiento.<br><span class="en">In about 72 hours you get 2 sample ads and a launch plan.</span></li>
+      <li>Si te gustan, empezamos el <b>piloto de 30 días</b>: anuncios en vivo en 7 días, o tus primeros 30 días son gratis.<br><span class="en">If you like them, we start the 30-day pilot: ads live in 7 days, or your first 30 days are free.</span></li>
+      <li>Cada semana te mandamos un reporte simple, en español o en inglés.<br><span class="en">Every week you get a simple report, in Spanish or English.</span></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <strong>Para que no se pierda · So it doesn’t get lost</strong>
+    <p style="margin:8px 0 0">Te escribimos desde <span class="mail">vexorascale@gmail.com</span>. Si no lo ves, revisa Promociones o Spam.<br><span class="en">We’ll write from that address. If you don’t see it, check Promotions or Spam.</span></p>
+    <p style="margin:14px 0 0">¿Prefieres hablar? Responde a nuestro correo y agendamos 15 minutos. La pauta la pagas directo a Meta; tu dinero nunca pasa por nosotros.<br><span class="en">Rather talk? Reply to our email and we’ll set up 15 minutes. You pay Meta directly for ad spend; your money never goes through us.</span></p>
+  </div>
+
+  <p style="margin-top:22px"><a href="index.html">← Volver · Back</a> · <a href="https://instagram.com/vexorascale" rel="noopener">@vexorascale</a></p>
+</div>
+<script src="site-assets/vexi.js"></script>
+<script>document.getElementById('vexi').innerHTML=mascotSVG({expr:'excited',pose:'hold',w:150}).replace(/width="[^"]+" height="[^"]+"/,'width="100%"');</script>
+</body>
+</html>

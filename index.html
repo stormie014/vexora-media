@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vexora · Anuncios para restaurantes y panaderías</title>
+<meta name="description" content="Anuncios en Facebook e Instagram para restaurantes y panaderías. Pide 2 anuncios de muestra gratis + plan de lanzamiento. Meta ads for restaurants and bakeries: get 2 free sample ads.">
+<meta property="og:title" content="Vexora · 2 anuncios de muestra gratis / 2 free sample ads">
+<meta property="og:description" content="Anuncios que hablan el idioma de tus clientes. Los dos. Ads that speak your customers' language. Both of them.">
+<meta property="og:image" content="site-assets/after.jpg">
+<link rel="icon" href="site-assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: one long scroll, single column on phones, two columns from 860px. Hero (claim + Vexi + button) → examples → 3 steps → guarantee → Vexi → FAQ → form. Spanish first, English underneath, everywhere. */
+:root{
+  --teal:#0D7C80; --teal-dark:#0A5F62; --teal-tint:#DDF0F0;
+  --pink:#C8365F; --pink-tint:#FBE6EC;
+  --bg:#F4F7F7; --surface:#FFFFFF; --ink:#14252A; --muted:#4D6267; --line:#D5E0E0;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.en{color:var(--muted);font-weight:500}
+.label{font:400 .82rem var(--mono);letter-spacing:.02em;color:var(--teal)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,4.6vw,2.9rem)}
+h2 + .en{display:block;font:500 clamp(1.05rem,2.2vw,1.3rem)/1.3 var(--body);margin-top:10px;letter-spacing:0}
+section{padding-block:72px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#fff;text-decoration:none;font:700 1.05rem/1.2 var(--body);padding:16px 24px;border-radius:14px;border:0;cursor:pointer;box-shadow:0 8px 0 #9e2448;transition:transform .12s, box-shadow .12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 6px 0 #9e2448}
+.btn:active{transform:translateY(6px);box-shadow:0 2px 0 #9e2448}
+.btn small{display:block;font-weight:500;opacity:.85;font-size:.82rem}
+
+/* header */
+header{padding-block:18px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.35rem var(--display);color:var(--ink);text-decoration:none}
+.logo span.v{width:38px;height:38px;border-radius:10px;background:var(--teal);color:#fff;display:grid;place-items:center;font:800 1.4rem var(--display);position:relative}
+.logo span.v::after{content:"";position:absolute;right:5px;bottom:6px;width:7px;height:7px;background:var(--pink);border-radius:2px}
+.bar a.mini{font:700 .9rem var(--body);color:var(--teal);text-decoration:none;border:2px solid var(--teal);padding:8px 14px;border-radius:10px;white-space:nowrap}
+
+/* hero */
+.hero{padding-block:28px 64px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
+@media (min-width:860px){.hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}}
+.hero h1{font-size:clamp(2.3rem,6.4vw,4.1rem)}
+.hero h1 em{font-style:normal;color:var(--pink)}
+.hero .en-big{display:block;font:600 clamp(1.1rem,2.4vw,1.45rem)/1.3 var(--body);color:var(--muted);margin-top:14px;max-width:34ch}
+.hero p.sub{margin:22px 0 0;max-width:44ch}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:28px}
+.hero .note{font:.88rem var(--body);color:var(--muted)}
+.vexi-stage{position:relative;justify-self:center;width:min(340px,64vw)}
+.bubble{position:relative;z-index:2;margin:0 0 -18px -10px;background:var(--surface);border:2px solid var(--ink);border-radius:16px;padding:10px 14px;font:700 .95rem/1.25 var(--body);box-shadow:4px 4px 0 var(--ink);max-width:220px;transform:rotate(-3deg)}
+.bubble .en{display:block;font-weight:500;font-size:.85rem}
+.vexi-stage svg{width:100%;height:auto}
+@media (prefers-reduced-motion:no-preference){.vexi-stage svg{animation:bob 3.2s ease-in-out infinite}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* language band */
+.band{background:var(--teal);color:#fff;padding-block:22px}
+.band p{margin:0;font:800 clamp(1.2rem,3vw,1.7rem)/1.2 var(--display);text-align:center}
+.band p span{display:block;font:500 1rem var(--body);opacity:.85;margin-top:4px}
+
+/* examples */
+.examples-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-top:34px}
+@media (min-width:760px){.examples-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+figure{margin:0;background:var(--surface);border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+figcaption{padding:14px 16px 16px;font-size:.95rem}
+figcaption b{display:block}
+.tag{display:inline-block;font:700 .72rem var(--mono);text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-bottom:6px}
+.tag.bad{background:#E9ECEC;color:#55666a}.tag.good{background:var(--pink-tint);color:var(--pink)}
+.fine{font-size:.85rem;color:var(--muted);margin-top:14px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:34px;counter-reset:s}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.step .n{font:700 2.2rem var(--mono);color:var(--pink);line-height:1}
+.step h3{font-size:1.45rem;margin-top:14px}
+.step p{margin:10px 0 0}
+
+/* guarantee */
+.guarantee{background:var(--ink);color:#fff;border-radius:28px;padding:40px 28px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center}
+@media (min-width:860px){.guarantee{grid-template-columns:auto minmax(0,1fr);padding:48px}}
+.seal{width:132px;height:132px;border-radius:50%;border:3px dashed #9FE0D9;display:grid;place-items:center;text-align:center;font:700 .95rem/1.15 var(--mono);color:#9FE0D9;transform:rotate(-8deg)}
+.seal b{display:block;font:800 2.6rem var(--display);color:#fff;letter-spacing:-1px}
+.guarantee h2{color:#fff}
+.guarantee .en{color:#C8DCDD}
+.guarantee p{margin:14px 0 0;color:#E5EFEF}
+
+/* meet vexi */
+.meet{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center}
+@media (min-width:860px){.meet{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}}
+.moods{display:flex;gap:8px;justify-content:center}
+.moods div{width:31%}
+.meet p{max-width:52ch}
+
+/* faq */
+.faq{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+summary{cursor:pointer;font:700 1.05rem/1.3 var(--body);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:700 1.3rem var(--mono);color:var(--pink);flex:none}
+details[open] summary::after{content:"–"}
+summary .en{display:block;font-weight:500;font-size:.92rem}
+details p{margin:12px 0 0}
+
+/* form */
+.form-wrap{background:var(--surface);border-radius:28px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--teal);padding:32px 22px;display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:860px){.form-wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);padding:44px}}
+form{display:flex;flex-direction:column;gap:18px}
+.field label,.field legend{display:block;font:700 .98rem/1.3 var(--body);margin-bottom:8px;padding:0}
+.field label .en,.field legend .en{font-weight:500;font-size:.88rem}
+.field input[type=text],.field input[type=email],.field input[type=tel]{width:100%;font:500 1rem var(--body);padding:14px 14px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+.field input:focus{border-color:var(--teal);outline:none;background:#fff}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;margin:0}
+.chips input{position:absolute;opacity:0;inset:0}
+.chips span{display:inline-block;border:2px solid var(--line);border-radius:999px;padding:9px 14px;font:600 .92rem var(--body);background:var(--bg);cursor:pointer}
+.chips input:checked + span{background:var(--teal);border-color:var(--teal);color:#fff}
+.chips input:focus-visible + span{outline:3px solid var(--pink);outline-offset:2px}
+.opt{font-weight:500;color:var(--muted);font-size:.85rem}
+.form-side ul{padding-left:20px;margin:16px 0 0}
+.form-side li{margin-top:8px}
+.hp{position:absolute;left:-9999px}
+footer{padding-block:40px 56px;color:var(--muted);font-size:.9rem}
+footer .bar{flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="logo" href="#top" aria-label="Vexora"><span class="v">V</span>Vexora</a>
+    <a class="mini" href="#form">2 anuncios gratis</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="label">// restaurantes y panaderías · restaurants &amp; bakeries</div>
+        <h1 style="margin-top:14px">Los buenos negocios pierden clientes frente a otros peores… <em>con mejores anuncios.</em></h1>
+        <span class="en-big">Good local businesses lose customers to worse ones with better ads.</span>
+        <p class="sub">Hacemos anuncios en Facebook e Instagram que llenan mesas y vitrinas. Empezamos con 2 anuncios de muestra para tu negocio, gratis.<br><span class="en">We make Facebook and Instagram ads that fill tables and display cases. It starts with 2 free sample ads made for your business.</span></p>
+        <div class="cta-row">
+          <a class="btn" href="#form">Quiero mis 2 anuncios gratis <small>Get my 2 free ads</small></a>
+          <span class="note">30 segundos · sin llamadas · sin tarjeta<br>30 seconds · no call · no card</span>
+        </div>
+      </div>
+      <div class="vexi-stage" aria-hidden="true">
+        <div class="bubble">“¿Un anuncio sin botón? Yo no.”<span class="en">An ad with no button? Not on my watch.</span></div>
+        <div id="vexi-hero"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="band"><div class="wrap"><p>Anuncios que hablan el idioma de tus clientes. Los dos.<span>Ads that speak your customers’ language. Both of them.</span></p></div></div>
+
+  <section class="wrap" id="examples">
+    <div class="label">// así se ve · what it looks like</div>
+    <h2 style="margin-top:12px">De foto “boosteada” a anuncio que vende</h2>
+    <span class="en">From a boosted photo to an ad that sells</span>
+    <div class="examples-grid">
+      <figure><img src="site-assets/before.jpg" alt="Before: a dark boosted food photo with a vague caption and no button." loading="lazy"><figcaption><span class="tag bad">Antes · Before</span><b>Foto oscura, “¡vengan hoy!”, sin botón.</b><span class="en">Dark photo, “come today!”, no button.</span></figcaption></figure>
+      <figure><img src="site-assets/after.jpg" alt="After: a clean Instagram ad with a family combo offer and an Order now button." loading="lazy"><figcaption><span class="tag good">Después · After</span><b>Oferta clara, zona cercana, botón Pedir.</b><span class="en">Clear offer, nearby area, an Order button.</span></figcaption></figure>
+      <figure><img src="site-assets/bakery.jpg" alt="A carousel cover about holiday pre-orders for bakeries." loading="lazy"><figcaption><span class="tag good">Panaderías · Bakeries</span><b>Pedidos de fiestas desde ya.</b><span class="en">Holiday pre-orders, starting now.</span></figcaption></figure>
+    </div>
+    <p class="fine">Ejemplos con negocios inventados. Los tuyos se hacen con tu menú, tus fotos y tu oferta. · Examples use invented businesses. Yours are made with your menu, your photos and your offer.</p>
+  </section>
+
+  <section class="wrap" id="how">
+    <div class="label">// cómo funciona · how it works</div>
+    <h2 style="margin-top:12px">Tres pasos. Cero riesgo.</h2>
+    <span class="en">Three steps. Zero risk.</span>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Nos cuentas</h3><p>Nombre, tu Instagram o web y un correo. 30 segundos.<br><span class="en">Tell us your name, Instagram or website, and email. 30 seconds.</span></p></div>
+      <div class="step"><div class="n">02</div><h3>Recibes 2 anuncios + plan</h3><p>En unas 72 horas: 2 anuncios de muestra hechos para tu negocio y un plan de lanzamiento.<br><span class="en">In about 72 hours: 2 sample ads made for your business plus a launch plan.</span></p></div>
+      <div class="step"><div class="n">03</div><h3>Decides</h3><p>Si te gustan, empezamos el piloto de 30 días. Si no, te quedas con las ideas.<br><span class="en">If you like them, we start the 30-day pilot. If not, keep the ideas.</span></p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="guarantee">
+      <div class="seal"><div><b>7</b>días<br>days</div></div>
+      <div>
+        <div class="label" style="color:#9FE0D9">// garantía · guarantee</div>
+        <h2 style="margin-top:10px">Tus anuncios en vivo en 7 días, o tus primeros 30 días son gratis.</h2>
+        <span class="en">Your ads live within 7 days, or your first 30 days are free.</span>
+        <p>Contamos los 7 días desde que nos das acceso a tu página. La pauta la pagas tú directo a Meta, así que tu dinero nunca pasa por nosotros.<br><span class="en" style="color:#C8DCDD">The 7 days start when you give us access to your page. You pay Meta directly for ad spend, so your money never goes through us.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="vexi">
+    <div class="meet">
+      <div class="moods" aria-hidden="true"><div id="m1"></div><div id="m2"></div><div id="m3"></div></div>
+      <div>
+        <div class="label">// conoce a Vexi · meet Vexi</div>
+        <h2 style="margin-top:12px">Vexi ve cada anuncio primero. Y no soporta los malos.</h2>
+        <span class="en">Vexi sees every ad first. And she can’t stand the bad ones.</span>
+        <p>Fotos borrosas, promociones a las 11 de la noche, anuncios sin botón: Vexi los juzga a todos. Con los dueños es otra cosa: les arma anuncios claros, con una oferta, un lugar y un botón.<br><span class="en">Blurry photos, 11 pm boosts, ads with no button: Vexi judges them all. With owners she’s a sweetheart, building clear ads with an offer, a place and a button.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="faq">
+    <div class="label">// preguntas · faq</div>
+    <h2 style="margin-top:12px">Lo que todos preguntan</h2>
+    <span class="en">What everyone asks</span>
+    <div class="faq">
+      <details><summary><span>¿Cuánto cuesta?<span class="en">How much does it cost?</span></span></summary><p>Las muestras son gratis. Con tus 2 anuncios te enviamos el precio del piloto de 30 días por correo, sin compromiso.<br><span class="en">The samples are free. With your 2 ads we email you the price of the 30-day pilot, with no obligation.</span></p></details>
+      <details><summary><span>¿Quién paga la publicidad?<span class="en">Who pays for the ads themselves?</span></span></summary><p>Tú, directo a Meta con tu tarjeta. Te recomendamos un monto según tu zona y tu meta.<br><span class="en">You do, straight to Meta with your card. We suggest an amount based on your area and goal.</span></p></details>
+      <details><summary><span>¿Necesitan mi contraseña?<span class="en">Do you need my password?</span></span></summary><p>No. Nos das acceso como socio desde tu cuenta de Meta y lo puedes quitar cuando quieras.<br><span class="en">No. You add us as a partner from your Meta account and can remove us anytime.</span></p></details>
+      <details><summary><span>¿Garantizan ventas?<span class="en">Do you guarantee sales?</span></span></summary><p>No prometemos números que dependen de muchas cosas. Prometemos anuncios bien hechos, en vivo en 7 días, y un reporte claro cada semana.<br><span class="en">We don’t promise numbers that depend on many things. We promise well-built ads, live in 7 days, and a clear report every week.</span></p></details>
+      <details><summary><span>¿En español o en inglés?<span class="en">Spanish or English?</span></span></summary><p>En los dos. Hacemos anuncios en el idioma de tus clientes, y te atendemos en el tuyo.<br><span class="en">Both. We make ads in your customers’ language, and talk to you in yours.</span></p></details>
+      <details><summary><span>¿Por qué cupos limitados?<span class="en">Why limited spots?</span></span></summary><p>Hacemos cada muestra a mano, así que solo armamos unas pocas por día.<br><span class="en">We make every sample by hand, so we only build a few each day.</span></p></details>
+    </div>
+  </section>
+
+  <section class="wrap" id="form">
+    <div class="form-wrap">
+      <div class="form-side">
+        <div class="label">// gratis · free</div>
+        <h2 style="margin-top:12px">Pide tus 2 anuncios de muestra</h2>
+        <span class="en">Get your 2 free sample ads + a launch plan</span>
+        <ul>
+          <li>Hechos para tu negocio, no plantillas. <span class="en">Made for your business, not templates.</span></li>
+          <li>En unas 72 horas, a tu correo. <span class="en">In about 72 hours, to your inbox.</span></li>
+          <li>Sin llamadas ni tarjeta. <span class="en">No call, no card.</span></li>
+        </ul>
+        <div style="margin-top:22px;width:200px;max-width:60%" id="vexi-form" aria-hidden="true"></div>
+      </div>
+      <form action="https://formsubmit.co/vexorascale@gmail.com" method="POST" id="lead">
+        <input type="hidden" name="_subject" value="Nueva solicitud: 2 anuncios de muestra">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" id="next" value="">
+        <input type="hidden" name="_autoresponse" value="¡Gracias! Recibimos tu solicitud. En unas 72 horas te enviamos 2 anuncios de muestra y un plan de lanzamiento desde vexorascale@gmail.com. / Thanks! We got your request. In about 72 hours we'll send 2 sample ads and a launch plan from vexorascale@gmail.com. — Vexora">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field"><label for="f-name">Nombre del negocio <span class="en">· Business name</span></label><input id="f-name" name="Negocio" type="text" required autocomplete="organization"></div>
+        <div class="field"><label for="f-link">Tu Instagram o web <span class="en">· Your Instagram or website</span></label><input id="f-link" name="Instagram o web" type="text" required placeholder="@tunegocio · tunegocio.com"></div>
+        <div class="field"><label for="f-email">Correo <span class="en">· Email</span></label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+
+        <fieldset class="field"><legend>¿Qué quieres que hagan tus clientes? <span class="en">· What should customers do?</span></legend>
+          <div class="chips">
+            <label><input type="radio" name="Acción" value="Pedir / Order" required><span>Pedir · Order</span></label>
+            <label><input type="radio" name="Acción" value="Reservar / Book"><span>Reservar · Book</span></label>
+            <label><input type="radio" name="Acción" value="Llamar / Call"><span>Llamar · Call</span></label>
+            <label><input type="radio" name="Acción" value="Pedidos de fiestas / Holiday orders"><span>Pedidos de fiestas · Holiday orders</span></label>
+          </div></fieldset>
+
+        <fieldset class="field"><legend>¿Cuándo te gustaría tener anuncios? <span class="en">· When would you want ads running?</span></legend>
+          <div class="chips">
+            <label><input type="radio" name="Cuándo" value="Este mes / This month" required><span>Este mes · This month</span></label>
+            <label><input type="radio" name="Cuándo" value="Más adelante / Later"><span>Más adelante · Later</span></label>
+            <label><input type="radio" name="Cuándo" value="Solo mirando / Just looking"><span>Solo mirando · Just looking</span></label>
+          </div></fieldset>
+
+        <div class="field"><label for="f-wa">WhatsApp <span class="opt">(opcional · optional)</span></label><input id="f-wa" name="WhatsApp" type="tel" autocomplete="tel"></div>
+
+        <button class="btn" type="submit" style="align-self:flex-start">Quiero mis 2 anuncios <small>Send my request</small></button>
+        <p class="fine" style="margin:0">Solo usamos tus datos para enviarte tus anuncios. · We only use your details to send your ads.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="bar">
+    <span>© Vexora · Meta ads</span>
+    <span>vexorascale@gmail.com · <a href="https://instagram.com/vexorascale" rel="noopener">@vexorascale</a></span>
+  </div>
+</footer>
+
+<script src="site-assets/vexi.js"></script>
+<script>
+  const put=(id,o)=>{const el=document.getElementById(id); if(el) el.innerHTML=mascotSVG(o).replace(/width="[^"]+" height="[^"]+"/,'width="100%"');};
+  put('vexi-hero',{expr:'sideeye',pose:'hips',w:340});
+  put('m1',{expr:'shocked',pose:'none',w:160});
+  put('m2',{expr:'sideeye',pose:'hips',w:160});
+  put('m3',{expr:'wink',pose:'wave',w:160});
+  put('vexi-form',{expr:'excited',pose:'hold',w:200});
+  document.getElementById('next').value=new URL('gracias.html',location.href).href;
+</script>
+</body>
+</html>
