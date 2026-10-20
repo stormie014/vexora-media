@@ -102,6 +102,7 @@ def main(src, out):
         "action": action, "actionKey": keymap(action, ACTION) or "order",
         "when": when, "whenKey": keymap(when, WHEN) or "later",
         "whatsapp": pick(f, "whatsapp"),
+        "about": pick(f, "sobre", "about"),
         "date": date, "messageId": msg["Message-ID"] or "",
         "photos": photos, "allFields": f,
     }

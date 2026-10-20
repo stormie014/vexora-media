@@ -123,8 +123,9 @@ details p{margin:12px 0 0}
 form{display:flex;flex-direction:column;gap:18px}
 .field label,.field legend{display:block;font:700 .98rem/1.3 var(--body);margin-bottom:8px;padding:0}
 .field label .en,.field legend .en{font-weight:500;font-size:.88rem}
-.field input[type=text],.field input[type=email],.field input[type=tel]{width:100%;font:500 1rem var(--body);padding:14px 14px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
-.field input:focus{border-color:var(--teal);outline:none;background:#fff}
+.field textarea,.field input[type=text],.field input[type=email],.field input[type=tel]{width:100%;font:500 1rem var(--body);padding:14px 14px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+.field textarea{resize:vertical;min-height:110px;line-height:1.45;font-family:var(--body)}
+.field input:focus,.field textarea:focus{border-color:var(--teal);outline:none;background:#fff}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{position:relative;margin:0}
@@ -280,6 +281,11 @@ footer .bar{flex-wrap:wrap}
             <label><input type="radio" name="Cuándo" value="Más adelante / Later"><span>Más adelante · Later</span></label>
             <label><input type="radio" name="Cuándo" value="Solo mirando / Just looking"><span>Solo mirando · Just looking</span></label>
           </div></fieldset>
+
+        <div class="field">
+          <label for="f-about">Cuéntanos de tu negocio <span class="opt">(opcional, pero ayuda mucho)</span><br><span class="en">Tell us about your business (optional, but it helps a lot)</span></label>
+          <textarea id="f-about" name="Sobre el negocio" rows="5" maxlength="800" placeholder="Ej.: qué vendes, tu producto estrella, qué te hace diferente y cómo quieres verte. · What you sell, your best seller, your vibe."></textarea>
+        </div>
 
         <div class="field">
           <label for="f-photos">Fotos de tu negocio o producto <span class="opt">(1–4 · opcional, pero ayuda mucho)</span><br><span class="en">Photos of your business or product (1–4 · optional, but it helps a lot)</span></label>
