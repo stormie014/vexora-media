@@ -1,0 +1,14 @@
+{
+ "token": "<16 random hex chars>",
+ "lang": "es | en | both",
+ "business": "Café Aurora",
+ "handle": "cafeaurora",
+ "initial": "A",
+ "action": "order | book | call | quote",
+ "colors": {"accent": "#a8280e  (optional: brand colour from their site/logo; otherwise taken from the photos)"},
+ "photos": ["photos/1.jpg", "photos/2.jpg"],
+ "ad1": {"photo": 0, "eyebrow": "Pide antes, sin fila", "headline": "Tu café de la mañana, listo al llegar", "offer": "Café + pan dulce · pídelo en la app", "cta": "Pedir ahora", "below": "Pedido directo · pick-up", "primaryText": "Pide desde el carro y recógelo caliente. Abrimos a las 7."},
+ "ad2": {"photo": 1, "eyebrow": "Solo esta semana", "headline": "Lunes sin fila", "offer": "2×1 en lattes hasta las 10", "cta": "Pedir ahora"},
+ "plan": {"who": "personas a 3–5 millas de tu café, de lunes a viernes", "when": "de 6 a 10 am, cuando la gente decide dónde comprar su café", "track": "pedidos directos", "spend": "$7–10", "button": "Pedir ahora"},
+ "email": {"name": "", "subject": "tus 2 anuncios para Café Aurora", "ad1": "el café de la mañana para pedir antes y recoger sin fila", "ad2": "una Story con 2×1 en lattes los lunes", "address": "Vexora · FL 33365"}
+}
